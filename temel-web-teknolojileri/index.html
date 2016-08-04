@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Temel Web Teknolojileri</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3 style="color: #27ae60">
+						Temel Web Teknolojileri
+					</h3>
+				</section>
+				<section>
+					<h2 style="color: #27ae60">
+						HTTP
+					</h2>
+					<h6>
+						Hypertext Transfer Protocol
+					</h6>
+					<p class="fragment">
+						Sunucu ve istemci arasındaki iletişim kurallarını belirleyen, metin tabanlı iletişim protokolüdür.
+					</p>
+					<p class="fragment">
+						<span style="color: #27ae60">80</span> portunu kullanır.
+					</p>
+				</section>
+				<section>
+					<h2 style="color: #27ae60">
+						SSL
+					</h2>
+					<h6>
+						Secure Sockets Layer
+					</h6>
+					<p class="fragment">
+						Sunucu ve istemci arasında güvenli veri iletişimi sağlayan protokoldür.
+					</p>
+				</section>
+				<section>
+					<h2 style="color: #27ae60">
+						HTTPS
+					</h2>
+					<h6>
+						Secure Hypertext Transfer Protocol
+					</h6>
+					<p class="fragment">
+						<span style="color: #27ae60">HTTP</span> protokolünün <span style="color: #27ae60">SSL/TLS</span> protokolü ile birleşmesinden oluşan protokoldür.
+					</p>
+					<p class="fragment">
+						SSL sertifikası gerektirir.
+					</p>
+					<p class="fragment">
+						<span style="color: #27ae60">443</span> portunu kullanır.
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: #27ae60">
+							HTTP Durum Kodları
+						</h2>
+						<p class="fragment">
+							HTTP durum kodları 5'e ayrılmıştır.
+						</p>
+						<table class="fragment">
+							<tr>
+								<th>Kod</th>
+								<th>Mesaj</th>
+							</tr>
+							<tr>
+								<td>1**</td>
+								<td>Bilgi</td>
+							</tr>
+							<tr>
+								<td>2**</td>
+								<td>Başarı</td>
+							</tr>
+							<tr>
+								<td>3**</td>
+								<td>Yönlendirme</td>
+							</tr>
+							<tr>
+								<td>4**</td>
+								<td>İstemci Hatası</td>
+							</tr>
+							<tr>
+								<td>5**</td>
+								<td>Sunucu Hatası</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							Yaygın HTTP Durum Kodları
+						</h2>
+						<table class="fragment">
+							<tr>
+								<th>Kod</th>
+								<th>Mesaj</th>
+							</tr>
+							<tr>
+								<td>200</td>
+								<td>OK.</td>
+							</tr>
+							<tr>
+								<td>201</td>
+								<td>Oluşturuldu.</td>
+							</tr>
+							<tr>
+								<td>301</td>
+								<td>Kalıcı olarak taşındı.</td>
+							</tr>
+							<tr>
+								<td>302</td>
+								<td>Geçici olarak taşındı.</td>
+							</tr>
+							<tr>
+								<td>400</td>
+								<td>Kötü istek.</td>
+							</tr>
+							<tr>
+								<td>401</td>
+								<td>Yetkisiz.</td>
+							</tr>
+							<tr>
+								<td>404</td>
+								<td>Bulunamadı.</td>
+							</tr>
+							<tr>
+								<td>500</td>
+								<td>İç sunucu hatası.</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: #27ae60">
+							HTTP İstek Metodları
+						</h2>
+						<p class="fragment">
+							Sunucu ile veri alışverişinde bulunmak için kullanılan metodlardır.
+						</p>
+						<p class="fragment">
+							İstek<span style="color: #27ae60">(request)</span> sunucu tarafında işleme alınıp istemciye bir yanıt<span style="color: #27ae60">(response)</span> gönderilir.
+						</p>
+						<p class="fragment">
+							Response <span style="color: #27ae60">header</span> ve <span style="color: #27ae60">body</span> olmak üzere iki kısımdan oluşur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							GET
+						</h2>
+						<p class="fragment">
+							Sunucudan veri almak için kullanılan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							HEAD
+						</h2>
+						<p class="fragment">
+							Sunucudan bir verinin sadece <span style="color: #27ae60">header</span> değerini almak için kullanılan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							POST
+						</h2>
+						<p class="fragment">
+							Sunucuya veri göndermek için kullanılan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							PUT
+						</h2>
+						<p class="fragment">
+							Sunucudaki bir veriyi değiştirmek için kullanılan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							DELETE
+						</h2>
+						<p class="fragment">
+							Sunucuduaki bir veriyi silmek için kullanılan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							TRACE
+						</h2>
+						<p class="fragment">
+							Sunucuya yollanan isteği yanıt olarak geri dönen metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							OPTIONS
+						</h2>
+						<p class="fragment">
+							Sunucunun, istek yapılan adres için hangi metodların kullanılabileceği bilgisini dönen metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							CONNECT
+						</h2>
+						<p class="fragment">
+							Sunucunun, başka bir sunucuya istek yapmasını sağlayan metoddur.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							PATCH
+						</h2>
+						<p class="fragment">
+							Sunucudaki bir verinin, sadece belli bir bölümünü değiştirmek için kullanılan metoddur.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2 style="color: #27ae60">
+						Cookie (Çerez)
+					</h2>
+					<p class="fragment">
+						Web uygulamalarının, gerektiğinde tekrar kullanmak için istemcinin bilgisayarında oluşturduğu metin dosyalarıdır.
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: #27ae60">
+							Web Storage
+						</h2>
+						<p class="fragment">
+							Web uygulamalarının veriyi yerel olarak tutmak için kullanılan servistir. Veri kullanıcının tarayıcısına kaydedilir.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							Local Storage
+						</h2>
+						<p class="fragment">
+							Veriyi sona erme tarihi olmadan depolar.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							Session Storage
+						</h2>
+						<p class="fragment">
+							Veriyi tek bir oturum için depolar. Oturum sona erdiğinde veri silinir.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: #27ae60">
+							API
+						</h2>
+						<p class="fragment">
+							Bir uygulamanın belli işlevlerini, farklı bir uygulamanın kullanılabilmesi için oluşturulmuş arabirimdir.
+						</p>
+					</section>
+					<section>
+						<h2 style="color: #27ae60">
+							Web Servis
+						</h2>
+						<p class="fragment">
+							HTTP protokolü kullanarak iki cihaz arasında iletişim sağlayan fonksiyonlar bütünüdür.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h1 style="color: #f34c28">
+						Teşekkürler
+					</h1>
+					<p>@monrcelik</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

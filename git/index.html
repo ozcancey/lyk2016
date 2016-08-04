@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GIT Sürüm Kontrol Sistemi</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Font Icons -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1 style="color: #f34c28">
+						<i class="fa fa-git"></i>
+					</h1>
+					<h3>
+						Sürüm Kontrol Sistemi
+					</h3>
+				</section>
+				<section>
+					<h2 lang="tr" style="color: #f34c28">Sürüm Kontrol Nedir?</h2>
+					<p>
+						Sürüm kontrol, dosya ya da dosyalar üzerinde yapılan değişiklikleri kayıt altına alan, ve bu değişiklikler arasında geçiş yapmanızı sağlayan bir sistemdir.
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: #f34c28">GIT <span lang="tr">Nedir?</span></h2>
+						<p>
+							GIT, dağıtık çalışan bir sürüm kontrol sistemidir.
+						</p>
+					</section>
+					<section>
+						<h2 lang="tr" style="color: #f34c28">Tarihçe</h2>
+						<p>
+							Linus Torvalds tarafından 2005 yılında yayınlanmıştır.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2 lang="tr" style="color: #f34c28">Dağıtık?</h2>
+					<ul>
+						<li class="fragment">Geliştiriciler tüm geçmişe sahiptir.</li>
+						<li class="fragment">Çevirimiçi olmayı gerektirmez.</li>
+						<li class="fragment">Değişiklikler sunucu aracılığı ile paylaşılabilir.</li>
+					</ul>
+				</section>
+				<section>
+					<h2 lang="tr" style="color: #f34c28">Başlangıç</h2>
+					<pre class="fragment"><code class="hljs dos">mkdir yeniproje</code></pre>
+					<pre class="fragment"><code class="hljs bash">cd yeniproje</code></pre>
+					<pre class="fragment"><code class="hljs bash">git init</code></pre>
+					<pre class="fragment"><code class="hljs bash">touch README.md</code></pre>
+					<pre class="fragment"><code class="hljs bash">git add .</code></pre>
+					<pre class="fragment"><code class="hljs bash">git commit -m "İlk commit!" </code></pre>
+				</section>
+				<section>
+					<section>
+						<h2 lang="tr" style="color: #f34c28">Temel Komutlar</h2>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git config</h2>
+						<p>
+							Kullanıcı adı, e-posta vb. temel ayarları yapmayı sağlayan komuttur.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git config --global user.name "M. Onur Çelik"</code></pre>
+						<pre class="fragment"><code class="hljs bash">git config --global user.email monrcelik@gmail.com</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git init</h2>
+						<p>
+							Bulunan dizini, sürüm kontrolü altına alır.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git init</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git clone</h2>
+						<p>
+							Var olan bir git repository'sini klonlar.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git clone https://github.com/git/git.git</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git add</h2>
+						<p>
+							Varolan dosyaları commit için hazırlar. Yeni oluşturulan dosyaları sürüm kontrolüne ekler.
+						</p>
+						<p class="fragment">Belli bir dosya için;</p>
+						<pre class="fragment"><code class="hljs bash">git add README.md</code></pre>
+						<p class="fragment">Bulunulan dizin için;</p>
+						<pre class="fragment"><code class="hljs bash">git add .</code></pre>
+						<p class="fragment">Projedeki tüm dosyalar için;</p>
+						<pre class="fragment"><code class="hljs bash">git add *</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git status</h2>
+						<p>
+							Dosyaların durumunu bildirir.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git status</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git commit</h2>
+						<p>
+							Eklenmiş değişiklikleri kaydeder.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git commit -m "Commit mesajı."</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git push</h2>
+						<p>
+							Kaydedilmiş değişiklikleri uzak sunucuya gönderir.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git push origin master</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git pull</h2>
+						<p>
+							Uzak sunucudaki değişiklikleri yerel sunucuya aktarır.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git pull origin master</code></pre>
+					</section>
+					<section>
+						<h2 style="color: #f34c28; text-transform: none;">git log</h2>
+						<p>
+							Repository geçmişini gösterir.
+						</p>
+						<pre class="fragment"><code class="hljs bash">git log</code></pre>
+						<pre class="fragment"><code class="hljs bash">git log --oneline</code></pre>
+					</section>
+				</section>
+				<section>
+					<h1 style="color: #f34c28">
+						Teşekkürler
+					</h1>
+					<p>@monrcelik</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
